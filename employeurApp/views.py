@@ -16,7 +16,7 @@ def get_tokens(user):
 class EmployerViewSet(viewsets.ModelViewSet):
     queryset = Employer.objects.all()
     serializer_class = EmployerSignupSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
     
 class SignupView(APIView):
     def post(self, request):

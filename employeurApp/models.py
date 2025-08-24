@@ -8,6 +8,7 @@ class Employer(User):
     address = models.TextField(blank=True)
     website = models.URLField(blank=True)
     accountType = models.CharField(max_length=100, blank=True)
+    registreCommerce = models.CharField(max_length=100, blank=True)
     companyName = models.CharField(max_length=255, blank=True)
     industry = models.CharField(max_length=100, blank=True)
     companySize = models.CharField(max_length=50, blank=True)

@@ -9,12 +9,13 @@ class EmployerSignupSerializer(serializers.ModelSerializer):
         model = Employer
         fields = [
             'username', 'email', 'password', 'first_name', 'last_name',
-            'contactPerson', 'phone', 'address', 'website',
+            'contactPerson', 'phone', 'address',
             'accountType', 'companyName', 'industry', 'companySize',
             'is_foreign'
         ]
 
     def create(self, validated_data):
+        print(validated_data)
         password = validated_data.pop('password')
         user = Employer(**validated_data)
         user.set_password(password)
